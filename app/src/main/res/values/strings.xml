@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">App1</string>
+    <string name="name">Full Name</string>
+    <string-array name="countries">
+        <item>USA</item>
+        <item>Japan</item>
+        <item>India</item>
+        <item>Canada</item>
+        <item>China</item>
+        <item>Russia</item>
+    </string-array>
+    <string name="submit">Submit</string>
+    <string name="text1">text1</string>
+    <string name="text2">text2</string>
+    <string name="login_page">Login Page</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_now">Login Now!</string>
+    <string name="lefttop">LeftTop</string>
+    <string name="login">Login</string>
+    <string name="show_password">Show Password</string>
+</resources>
