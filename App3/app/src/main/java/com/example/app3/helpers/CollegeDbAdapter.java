@@ -1,6 +1,8 @@
 package com.example.app3.helpers;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -22,8 +24,23 @@ public class CollegeDbAdapter {
     }
     public void Close(){
         collegeDb.close();
+        collegeDb = null;
     }
 
+    public void InsertStudent(String name){
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("name",name);
+        collegeDb.insert("student",null,contentValues);
+    }
+
+    public String getStudents(){
+        String name="";
+        Cursor cursor = collegeDb.query("student",null,null,null,null,null,null);
+        while(cursor.moveToNext()){
+            name = name +";"+ cursor.getString(cursor.getColumnIndexOrThrow("name"));
+        }
+        return name;
+    }
     private static class CollegeDbHelper extends SQLiteOpenHelper{
 
 
@@ -33,7 +50,8 @@ public class CollegeDbAdapter {
 
         @Override
         public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
+            sqLiteDatabase.execSQL("CREATE TABLE student " +
+                    "(id INTEGER PRIMARY KEY AUTOINCREMENT,name TEXT)");
         }
 
         @Override
