@@ -79,16 +79,13 @@
             android:layout_height="wrap_content"
             android:text="Show"/>
     </LinearLayout>
-<!--        <CheckBox-->
-<!--            android:id="@+id/ch1"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Show password"-->
-<!--            android:layout_below="@id/inp2"-->
-<!--            />-->
-
-
-
+    <CheckBox
+            android:id="@+id/ch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show password"
+            android:layout_below="@id/inp2"
+            />
     <Button
         android:id="@+id/loginbtn"
         android:layout_width="wrap_content"

@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Button btnSave = findViewById(R.id.btn1);
         etName = findViewById(R.id.etName);
 //        preferences=getSharedPreferences(

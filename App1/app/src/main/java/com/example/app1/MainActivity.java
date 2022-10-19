@@ -35,29 +35,22 @@ public class MainActivity extends AppCompatActivity {
         }
         });
 
-
-        Log.d(TAG,"onCreate:");
-        Spinner spCountries = findViewById(R.id.spCountries);
-        ListView lvCountries=findViewById(R.id.lvCountries);
-//        String []countries={"India","USA","Pakistan","China","Switzerland","Canada","Mexico"};
         String []countries=getResources().getStringArray(R.array.countries);
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,countries);
-        spCountries.setAdapter(adapter);
-        lvCountries.setAdapter(adapter);
-        lvCountries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Toast.makeText(MainActivity.this,"position"+lvCountries.getSelectedItem(),Toast.LENGTH_SHORT).show();
-            }
-        });
 
-        spCountries.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
-                Toast.makeText(MainActivity.this, "position" + spCountries.getSelectedItem(), Toast.LENGTH_SHORT).show();
-                return false;
-            }
-        });
+        Spinner spCountries = findViewById(R.id.spCountries);
+        spCountries.setAdapter(adapter);
+
+//        ListView lvCountries=findViewById(R.id.lvCountries);
+//        lvCountries.setAdapter(adapter);
+//
+//        lvCountries.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Toast.makeText(MainActivity.this,"position"+lvCountries.getSelectedItem(),Toast.LENGTH_SHORT).show();
+//            }
+//        });
+
 
     }
 

@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         filter=new IntentFilter("android.intent.action.AIRPLANE_MODE");
         receiver=new BroadcastReceiver() {
             @Override
