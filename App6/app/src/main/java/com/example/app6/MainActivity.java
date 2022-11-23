@@ -23,8 +23,9 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         CustomCircle customCircle = new CustomCircle(this);
-        llMainContainer.findViewById(R.id.linLayout);
-        llMainContainer.addView(customCircle);
+        llMainContainer=findViewById(R.id.linLayout);
+//        llMainContainer.addView(customCircle);
+        llMainContainer.addView(view);
     }
 
     private class CustomCircle extends View{
@@ -39,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             paint.setColor(Color.RED);
             paint.setStyle(Paint.Style.FILL);
             paint.setAntiAlias(true);
-
             canvas.drawCircle(500,500,100,paint);
         }
 

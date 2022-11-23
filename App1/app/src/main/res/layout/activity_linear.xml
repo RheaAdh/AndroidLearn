@@ -7,7 +7,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:background="#e3e2ad"
         android:orientation="vertical" >
 
@@ -37,7 +37,7 @@
             android:layout_height="50dp"
             android:background="#bcf5b1"
             android:layout_gravity="right"
-            android:gravity="bottom|center"
+            android:gravity="bottom"
             android:text="right" />
 
         <TextView
@@ -73,6 +73,7 @@
         <TextView
             android:layout_width="200dp"
             android:layout_height="40dp"
+            android:gravity="bottom|center"
             android:layout_gravity="center_horizontal"
             android:background="#aacaff"
             android:text="center_horizontal" />
